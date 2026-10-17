@@ -41,6 +41,7 @@ h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(32px,5vw,52px
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.6vw,18px)}
 .film{grid-column:span 6;position:relative;text-decoration:none;display:block}
 .film.v{grid-column:span 3}
+.feat .film.big{grid-column:span 12}.feat .film.big .f{aspect-ratio:21/9}
 .film .f{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--card)}
 .film.v .f{aspect-ratio:9/16}
 .film img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;display:block}
@@ -72,19 +73,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <h1>Your day, <em>in motion.</em></h1>
   <p class="lede">Wedding films, event recaps and brand stories. Cut with care, delivered ready to share.</p>
   <div class="btns"><a class="btn solid" href="#films">Watch the films</a><a class="btn" href="#book">Book a call</a></div>
-</div><a class="play" href="#films" aria-label="Play reel"></a></div>
+</div><a class="play" href="https://www.dropbox.com/scl/fi/frt9xx2ghwunxiawphruj/Deji-Bo-highlightsFinal.mp4?rlkey=aktpxfxstpmyhwn7mg8tdb3e5&amp;dl=0" target="_blank" rel="noopener" aria-label="Play the Deji and Bo film"></a></div>
 
 <section id="films"><div class="wrap">
-  <div class="head"><div><div class="kick">Selected work</div><h2>Films</h2></div><p>A few recent pieces. Weddings, quinceañeras, milestone birthdays and brands across Los Angeles.</p></div>
-  <div class="filters"><button class="on" data-f="all">All</button><button data-f="wedding">Weddings</button><button data-f="event">Events</button><button data-f="brand">Brands</button></div>
-  <div class="grid">
-    <a class="film" data-k="wedding" href="#book"><div class="f"><img src="img/thumbs/deji-bo-highlightsfinal.jpg" alt=""><span class="tri"></span></div><div class="t">Deji &amp; Bo</div><div class="s">Wedding highlight film</div></a>
-    <a class="film" data-k="event" href="#book"><div class="f"><img src="img/thumbs/jo-beth-recap.jpg" alt=""><span class="tri"></span></div><div class="t">Jo Beth's Quinceañera</div><div class="s">Event recap</div></a>
-    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/fulleditcopywritefree.jpg" alt=""><span class="tri"></span></div><div class="t">Parenting for Liberation</div><div class="s">Community event</div></a>
-    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/jsl-wine-1010final.jpg" alt=""><span class="tri"></span></div><div class="t">1010 Wine</div><div class="s">Brand reel</div></a>
-    <a class="film v" data-k="event" href="#book"><div class="f"><img src="img/thumbs/mrbrownbirthdayedit.jpg" alt=""><span class="tri"></span></div><div class="t">Mr. Brown's Birthday</div><div class="s">Milestone birthday</div></a>
-    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/housereelfinal3.jpg" alt=""><span class="tri"></span></div><div class="t">House Reel</div><div class="s">Real estate</div></a>
-    <a class="film" data-k="event" href="#book"><div class="f"><img src="img/thumbs/oakleyeventrecap.jpg" alt=""><span class="tri"></span></div><div class="t">Oakley</div><div class="s">Event recap</div></a>
+  <div class="head"><div><div class="kick">Selected work</div><h2>Films</h2></div><p>Three recent films. A wedding, a quinceañera and a community event. Tap to watch.</p></div>
+  <div class="grid feat">
+    <a class="film big" href="https://www.dropbox.com/scl/fi/frt9xx2ghwunxiawphruj/Deji-Bo-highlightsFinal.mp4?rlkey=aktpxfxstpmyhwn7mg8tdb3e5&amp;dl=0" target="_blank" rel="noopener"><div class="f"><img src="img/thumbs/deji-bo-highlightsfinal.jpg" alt="Deji and Bo wedding highlight film, Los Angeles"><span class="tri"></span></div><div class="t">Deji &amp; Bo</div><div class="s">Wedding highlight film</div></a>
+    <a class="film" href="https://www.dropbox.com/scl/fi/dpl6sqa8xy5drcetej1i4/Jo-Beth-Recap.mp4?rlkey=ljil43ktbkfr85cycy2gmu5xh&amp;dl=0" target="_blank" rel="noopener"><div class="f"><img src="img/thumbs/jo-beth-recap.jpg" alt="Jo Beth quinceanera recap film"><span class="tri"></span></div><div class="t">Jo Beth's Quinceañera</div><div class="s">Event recap</div></a>
+    <a class="film" href="https://www.dropbox.com/scl/fi/0qkw7eqoahql5ez7y4nl0/FullEditCopywriteFree.mp4?rlkey=wu1gqmx2uky18ddl87d04xpk5&amp;dl=0" target="_blank" rel="noopener"><div class="f"><img src="img/thumbs/fulleditcopywritefree.jpg" alt="Parenting for Liberation community event film"><span class="tri"></span></div><div class="t">Parenting for Liberation</div><div class="s">Community event</div></a>
   </div>
 </div></section>
 
@@ -105,10 +101,4 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 
 <footer><div class="wrap"><span>© 2026 Creating Artful Moments · Cam Jackson · Los Angeles</span><span><a href="mailto:contact@camstudios.la">contact@camstudios.la</a> · <a href="https://gallery.creatingartfulmoments.com">Client galleries</a> · <a href="https://camstudios.la">Photography</a></span></div></footer>
-<script>
-document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{
-  document.querySelectorAll(".filters button").forEach(x=>x.classList.toggle("on",x===b));
-  document.querySelectorAll(".film").forEach(f=>f.style.display=b.dataset.f==="all"||f.dataset.k===b.dataset.f?"":"none");
-});
-</script>
 </body></html>
