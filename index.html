@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creating Artful Moments · Video by Cam Jackson</title>
+<meta name="description" content="Event, wedding and brand films in Los Angeles by Cam Jackson.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0d;--ink:#f3efe8;--soft:#a9a39a;--line:#262422;--accent:#c9a46a;--card:#161514}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+header{position:fixed;inset:0 0 auto;z-index:9;background:linear-gradient(#0d0d0dcc,#0d0d0d00)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-family:'Bodoni Moda',serif;font-size:20px;letter-spacing:.04em;text-decoration:none}
+.brand b{font-weight:600}
+nav{display:flex;gap:26px;align-items:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--soft)} nav a:hover{color:var(--ink)}
+.cta{border:1px solid var(--ink);padding:10px 18px;color:var(--ink)!important}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;background:#000 url(img/thumbs/deji-bo-highlightsfinal.jpg) center/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000b 0%,#0005 55%,#0000 100%),linear-gradient(180deg,#0006 0%,#0000 35%,#000d 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(48px,9vw,110px);width:100%}
+.kick{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(44px,9vw,104px);line-height:.95;margin:18px 0 20px;max-width:12ch}
+h1 em{color:var(--accent)}
+.lede{font-size:clamp(16px,2vw,19px);color:#ddd6cc;max-width:46ch;line-height:1.55}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:15px 26px;text-decoration:none;border:1px solid var(--ink)}
+.btn.solid{background:var(--ink);color:#000}
+.play{position:absolute;right:clamp(16px,4vw,40px);bottom:clamp(48px,9vw,110px);z-index:2;width:84px;height:84px;border-radius:50%;border:1px solid #fff9;display:grid;place-items:center;text-decoration:none}
+.play::before{content:"";border-left:20px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
+section{padding:clamp(64px,10vw,120px) 0;border-top:1px solid var(--line)}
+h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(32px,5vw,52px);margin:12px 0 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.head p{color:var(--soft);max-width:42ch;margin:0;line-height:1.55}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{background:none;border:1px solid var(--line);color:var(--soft);font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;cursor:pointer}
+.filters button.on{border-color:var(--ink);color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.6vw,18px)}
+.film{grid-column:span 6;position:relative;text-decoration:none;display:block}
+.film.v{grid-column:span 3}
+.film .f{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--card)}
+.film.v .f{aspect-ratio:9/16}
+.film img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;display:block}
+.film:hover img{transform:scale(1.04)}
+.film .f::after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 55%,#000b)}
+.film .tri{position:absolute;left:16px;bottom:16px;z-index:2;width:38px;height:38px;border-radius:50%;background:#fffe;display:grid;place-items:center}
+.film .tri::before{content:"";border-left:11px solid #000;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.film .t{margin-top:12px;font-family:'Bodoni Moda',serif;font-size:20px}
+.film .s{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-top:4px}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+.lane{border:1px solid var(--line);padding:30px 26px;background:var(--card)}
+.lane h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:26px;margin:0 0 10px}
+.lane p{color:var(--soft);line-height:1.6;margin:0;font-size:15px}
+.lane .n{font-size:11px;letter-spacing:.2em;color:var(--accent)}
+.book{text-align:center}
+.book p{color:var(--soft);max-width:52ch;margin:16px auto 0;line-height:1.6}
+.book .btns{justify-content:center}
+footer{border-top:1px solid var(--line);padding:36px 0;font-size:12px;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:860px){nav a:not(.cta){display:none}.film,.film.v{grid-column:span 6}.lanes{grid-template-columns:1fr}.play{display:none}}
+@media(max-width:520px){.film{grid-column:span 12}.film.v{grid-column:span 6}}
+</style></head>
+<body>
+<header><div class="wrap"><a class="brand" href="#"><b>C.A.M.</b> Creating Artful Moments</a>
+<nav><a href="#films">Films</a><a href="#services">Services</a><a href="https://camstudios.la">Photography</a><a class="cta" href="#book">Book a call</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="kick">Video by Cam Jackson · Los Angeles</div>
+  <h1>Your day, <em>in motion.</em></h1>
+  <p class="lede">Wedding films, event recaps and brand stories. Cut with care, delivered ready to share.</p>
+  <div class="btns"><a class="btn solid" href="#films">Watch the films</a><a class="btn" href="#book">Book a call</a></div>
+</div><a class="play" href="#films" aria-label="Play reel"></a></div>
+
+<section id="films"><div class="wrap">
+  <div class="head"><div><div class="kick">Selected work</div><h2>Films</h2></div><p>A few recent pieces. Weddings, quinceañeras, milestone birthdays and brands across Los Angeles.</p></div>
+  <div class="filters"><button class="on" data-f="all">All</button><button data-f="wedding">Weddings</button><button data-f="event">Events</button><button data-f="brand">Brands</button></div>
+  <div class="grid">
+    <a class="film" data-k="wedding" href="#book"><div class="f"><img src="img/thumbs/deji-bo-highlightsfinal.jpg" alt=""><span class="tri"></span></div><div class="t">Deji &amp; Bo</div><div class="s">Wedding highlight film</div></a>
+    <a class="film" data-k="event" href="#book"><div class="f"><img src="img/thumbs/jo-beth-recap.jpg" alt=""><span class="tri"></span></div><div class="t">Jo Beth's Quinceañera</div><div class="s">Event recap</div></a>
+    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/fulleditcopywritefree.jpg" alt=""><span class="tri"></span></div><div class="t">Parenting for Liberation</div><div class="s">Community event</div></a>
+    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/jsl-wine-1010final.jpg" alt=""><span class="tri"></span></div><div class="t">1010 Wine</div><div class="s">Brand reel</div></a>
+    <a class="film v" data-k="event" href="#book"><div class="f"><img src="img/thumbs/mrbrownbirthdayedit.jpg" alt=""><span class="tri"></span></div><div class="t">Mr. Brown's Birthday</div><div class="s">Milestone birthday</div></a>
+    <a class="film v" data-k="brand" href="#book"><div class="f"><img src="img/thumbs/housereelfinal3.jpg" alt=""><span class="tri"></span></div><div class="t">House Reel</div><div class="s">Real estate</div></a>
+    <a class="film" data-k="event" href="#book"><div class="f"><img src="img/thumbs/oakleyeventrecap.jpg" alt=""><span class="tri"></span></div><div class="t">Oakley</div><div class="s">Event recap</div></a>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="head"><div><div class="kick">Work with C.A.M.</div><h2>What I film</h2></div><p>Every project starts with a 15 minute call so the film fits the day.</p></div>
+  <div class="lanes">
+    <div class="lane"><div class="n">01</div><h3>Weddings</h3><p>Highlight films, ceremony and speeches. Your story, start to finish.</p></div>
+    <div class="lane"><div class="n">02</div><h3>Events</h3><p>Quinceañeras, sweet 16s, birthdays, galas and parties. Recaps you will rewatch.</p></div>
+    <div class="lane"><div class="n">03</div><h3>Brands &amp; Business</h3><p>Promos, reels and community stories that show who you are.</p></div>
+  </div>
+</div></section>
+
+<section id="book" class="book"><div class="wrap">
+  <div class="kick">Let's talk</div><h2>Tell me about your day.</h2>
+  <p>Book a free 15 minute call, or send your date and details and I'll get back to you.</p>
+  <div class="btns"><a class="btn solid" href="https://cam-controllingallmusic.zohobookings.com/5012218000000037004">Book a call</a>
+  <a class="btn" href="https://forms.zohopublic.com/controllingallmusic/form/PhotographyVideographybookingrequest/formperma/z3QuTZlOPqoK-NsoMR0LTdUIs5mH7njMKCsTLuzAsJQ">Book a date</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Creating Artful Moments · Cam Jackson · Los Angeles</span><span><a href="mailto:contact@camstudios.la">contact@camstudios.la</a> · <a href="https://gallery.creatingartfulmoments.com">Client galleries</a> · <a href="https://camstudios.la">Photography</a></span></div></footer>
+<script>
+document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.classList.toggle("on",x===b));
+  document.querySelectorAll(".film").forEach(f=>f.style.display=b.dataset.f==="all"||f.dataset.k===b.dataset.f?"":"none");
+});
+</script>
+</body></html>
